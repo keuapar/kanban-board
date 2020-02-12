@@ -6,7 +6,7 @@
 }
 
 body {
-    background: url('bckgrnd.jpg') no-repeat scroll center bottom;
+    background: url('bckgrnd.jpg') no-repeat fixed center bottom;
     background-size: cover;
     font-family: 'Ubuntu', sans-serif;
     display: flex;
@@ -19,7 +19,15 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+    width: 100vw;
+}
+
+@media only screen and (max-width:  640px) {
+    main {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 85vw;
+    }
 }
 
 h1 {
