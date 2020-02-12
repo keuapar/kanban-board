@@ -32,6 +32,7 @@ main {
 
 h1 {
     padding-top: 3vh;
+    padding-bottom: 2vh;
     font-family: 'Just Another Hand', cursive;
     letter-spacing: 0.3ch;
     color: #eeeeeedd;
@@ -40,6 +41,7 @@ h1 {
 .column {
     background: #dddddd80;
     width: 100%;
+    min-height: 80vh;
     height: 100%;
     margin: 1vh;
     border: 3px solid #333333;
@@ -64,7 +66,7 @@ h1 {
 
 .column h3 {
     text-align: center;
-    padding: 1vh;
+    padding: 2vh 0 1vh 0;
 }
 
 .column-inside {
@@ -75,6 +77,8 @@ h1 {
 }
 
 .column-inside span {
+    flex-grow: 1;
+    text-align: center;
     background: #eeeeee80;
     border: 2px solid #353535;
     margin: 1vh;
