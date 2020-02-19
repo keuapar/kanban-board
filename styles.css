@@ -3,12 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body {
     background: url('bckgrnd.jpg') no-repeat fixed center bottom;
     background-size: cover;
-    font-family: 'Ubuntu', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +47,6 @@ h1 {
     border: 3px solid #333333;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
     position: relative;
-    display: inline-block;
 }
 
 .column::before {
@@ -83,4 +82,74 @@ h1 {
     border: 2px solid #353535;
     margin: 1vh;
     padding: 1vh
+}
+
+.add-task-toggle {
+    z-index: 10;
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    background-color: #eeeeeedd;
+    padding: 10px;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 2px;
+    box-shadow: 2px 2px 2px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.add-task-toggle:hover,
+.add-task-toggle:active {
+    cursor: pointer;
+    color: #eeeeeedd;
+    background-color: #eeeeee20;
+}
+
+.add-task-overlay {
+    z-index: 5;
+    position: fixed;
+    height: 96vh;
+    width: 96%;
+    top: 2%;
+    left: 2%;
+    -webkit-box-shadow: 0px 0px 5px;
+    box-shadow: 0px 0px 5px;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    background-color: #eeee;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 40%;
+}
+
+
+.add-task-form fieldset {
+    font-size: 1.2em;
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-task-form textarea {
+    min-height: 150px;
+    min-width: 50vw;
+}
+
+.add-task-form button {
+    font-size: 1.2em;
+    box-shadow: 0px 0px 5px;
+    padding: 5%;
+    width: 100%;
 }
